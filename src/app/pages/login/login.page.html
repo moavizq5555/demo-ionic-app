@@ -1,0 +1,46 @@
+<ion-content>
+  <div class="main text-center">
+    <div style="width: 100%; margin: 16px 16px">
+      <div>
+        <div class="logo"><img [src]="logoPath" /></div>
+        <h4 class="flex-center">
+          <ion-label color="primary h4">Demo Login</ion-label>
+        </h4>
+      </div>
+     <div class="mt-5">
+        <form [formGroup]="loginForm">
+          <div class="input-center-div">
+            <ion-item class="ion-item" lines="none" class="ion-no-padding mb-2">
+              <ion-input
+                class="input-field ion-text-center"
+                placeholder="Enter Email"
+                type="email"
+                formControlName="email"
+              ></ion-input>
+            </ion-item>
+            <ion-item class="ion-item" lines="none" class="ion-no-padding mb-2">
+              <ion-input
+                class="input-field ion-text-center"
+                placeholder="Enter Password"
+                type="password"
+                formControlName="password"
+              ></ion-input>
+            </ion-item>
+            <div class="flex-center">
+              <ion-button
+               class="button"
+               fill="outline"
+               size="small"
+               (click)="login()"
+               color="danger"
+               >
+               LOGIN
+               <ion-icon slot="end" name="log-in"></ion-icon>
+             </ion-button>
+            </div>
+          </div>
+        </form>
+      </div> 
+    </div>
+  </div>
+</ion-content>

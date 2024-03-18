@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="locationBack()">
+        <ion-icon name="arrow-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Character details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ng-container *ngIf="!dataLoaded">
+    <ion-card >
+      <ion-skeleton-text animated style="height: 280px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="height: 10px;margin-top: 10px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="height: 5px;margin-top: 10px;"></ion-skeleton-text>
+    </ion-card>
+  </ng-container>
+  <ion-card >
+    <img alt="Silhouette of mountains" [src]="eachCharacter.imageUrl" />
+    <ion-card-header>
+      <ion-card-title>{{eachCharacter.title }} </ion-card-title>
+     
+    </ion-card-header>
+    <ion-card-content>
+      <table>
+        <tr>
+          <th>First Name</th>
+          <td>{{eachCharacter.firstName}}</td>
+        </tr>
+        <tr>
+          <th>Last Name</th>
+          <td>{{eachCharacter.lastName}}</td>
+        </tr>
+        <tr>
+          <th>Full Name</th>
+          <td>{{eachCharacter.fullName}}</td>
+        </tr>
+        <tr>
+          <th>Title</th>
+          <td>{{eachCharacter.title}}</td>
+        </tr>
+        <tr>
+          <th>Family</th>
+          <td>{{eachCharacter.family}}</td>
+        </tr>
+      </table>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
