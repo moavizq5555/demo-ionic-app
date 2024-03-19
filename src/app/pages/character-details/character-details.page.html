@@ -17,35 +17,38 @@
       <ion-skeleton-text animated style="height: 5px;margin-top: 10px;"></ion-skeleton-text>
     </ion-card>
   </ng-container>
-  <ion-card >
-    <img alt="Silhouette of mountains" [src]="eachCharacter.imageUrl" />
-    <ion-card-header>
-      <ion-card-title>{{eachCharacter.title }} </ion-card-title>
-     
-    </ion-card-header>
-    <ion-card-content>
-      <table>
-        <tr>
-          <th>First Name</th>
-          <td>{{eachCharacter.firstName}}</td>
-        </tr>
-        <tr>
-          <th>Last Name</th>
-          <td>{{eachCharacter.lastName}}</td>
-        </tr>
-        <tr>
-          <th>Full Name</th>
-          <td>{{eachCharacter.fullName}}</td>
-        </tr>
-        <tr>
-          <th>Title</th>
-          <td>{{eachCharacter.title}}</td>
-        </tr>
-        <tr>
-          <th>Family</th>
-          <td>{{eachCharacter.family}}</td>
-        </tr>
-      </table>
-    </ion-card-content>
-  </ion-card>
+  <ng-container *ngIf="dataLoaded">
+    <ion-card >
+      <img [alt]="eachCharacter.title" [src]="eachCharacter.imageUrl" />
+      <ion-card-header>
+        <ion-card-title>{{eachCharacter.title }} </ion-card-title>
+       
+      </ion-card-header>
+      <ion-card-content>
+        <table>
+          <tr>
+            <th>First Name</th>
+            <td>{{eachCharacter.firstName}}</td>
+          </tr>
+          <tr>
+            <th>Last Name</th>
+            <td>{{eachCharacter.lastName}}</td>
+          </tr>
+          <tr>
+            <th>Full Name</th>
+            <td>{{eachCharacter.fullName}}</td>
+          </tr>
+          <tr>
+            <th>Title</th>
+            <td>{{eachCharacter.title}}</td>
+          </tr>
+          <tr>
+            <th>Family</th>
+            <td>{{eachCharacter.family}}</td>
+          </tr>
+        </table>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+ 
 </ion-content>

@@ -12,18 +12,15 @@ export class Tab1Page {
   dataLoaded: boolean = false;
   skeletonData = [1,2,3,4,5,6,7,8,9,10]
   constructor(private global: GlobalService) {
-    
+    this.getCharacterLists();
   }
   doRefresh(event: any){
     this.dataLoaded = false;
     this.getCharacterLists(event);
   }
-  ionViewWillEnter(){
-    this.getCharacterLists();
-  }
+ 
 
   openCharacter(character:characters){
-    console.log("character---",character);
    this.global.helper.navigateForward('tabs/character-details',{id:character.id});
   }
 
