@@ -1,8 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="locationBack()">
+        <ion-icon name="arrow-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>
-      About me
+      {{'aboutPageTitle' | translate }}
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -10,21 +18,21 @@
   <ion-card >
     <img alt="moaviz" src="assets/images/moaviz.jpeg" />
     <ion-card-header>
-      <ion-card-title>Moaviz Shuqran Qureshi</ion-card-title>
+      <ion-card-title> {{'onwerName' | translate }}</ion-card-title>
      
     </ion-card-header>
     <ion-card-content>
       <table>
         <tr>
-          <th>Job Title</th>
+          <th>{{'jobTitle' | translate }}</th>
           <td>Mobile Application Developer</td>
         </tr>
         <tr>
-          <th>Education</th>
+          <th>{{'education' | translate }}</th>
           <td>BS Computer Scince</td>
         </tr>
         <tr>
-          <th>Role Description</th>
+          <th>{{'roleDescription' | translate }}</th>
           <td>
             As an Ionic developer deeply committed to collaborative teamwork, I am driven by a passion for continual learning and professional growth. Embracing the dynamics of team engagement, I find immense value in exchanging knowledge, ideas, and best practices with my colleagues.
             

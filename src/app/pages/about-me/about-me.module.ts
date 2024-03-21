@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CharacterDetailsPageRoutingModule } from './character-details-routing.module';
+import { AboutMePageRoutingModule } from './about-me-routing.module';
 
-import { CharacterDetailsPage } from './character-details.page';
-
+import { AboutMePage } from './about-me.page';
 import { TranslateModule } from '@ngx-translate/core';  
 
 @NgModule({
@@ -15,8 +14,9 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     FormsModule,
     IonicModule,
-    CharacterDetailsPageRoutingModule,TranslateModule
+    AboutMePageRoutingModule,
+    TranslateModule
   ],
-  declarations: [CharacterDetailsPage]
+  declarations: [AboutMePage]
 })
-export class CharacterDetailsPageModule {}
+export class AboutMePageModule {}

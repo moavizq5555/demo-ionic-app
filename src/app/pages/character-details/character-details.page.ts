@@ -10,6 +10,7 @@ import { GlobalService } from 'src/app/services/global.service';
 })
 export class CharacterDetailsPage{
   eachCharacter!: characters; 
+  characterName:String | undefined; 
   dataLoaded: boolean = false;
   constructor(private route: ActivatedRoute,private global :GlobalService) { 
     this.getCharacterDetails(this.route.snapshot.params);
@@ -17,6 +18,7 @@ export class CharacterDetailsPage{
   
 
   getCharacterDetails(param?:any){
+    this.characterName = param.name;
     this.global.api.getRequest('Characters/'+param.id).subscribe(
       (res) => {
        this.eachCharacter = res;

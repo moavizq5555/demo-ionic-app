@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable, from } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { ComponentService } from './component.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  constructor(private http: HttpClient,private components :ComponentService) { }
+  constructor(private http: HttpClient,private components :ComponentService,private translate:TranslateService) { }
 
   getRequest(route: string): Observable<any> {
     return from(
@@ -25,9 +26,9 @@ export class ApiService {
               },
               async (err: HttpErrorResponse) => {
                 if (err.status === 0) {
-                  this.components.showToast('No internet access');
+                  this.components.showToast(this.translate.instant('noInternet'));
                 } else {
-                  this.components.showToast('Something went wrong! 500 error');
+                  this.components.showToast(this.translate.instant('somethingWentWrong'));
                 }
                 reject(false);
               }

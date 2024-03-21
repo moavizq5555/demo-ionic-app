@@ -1,0 +1,24 @@
+
+{
+    "onwerName": "Moaviz Shuqran Qureshi",
+    "appTitle": "Games of throne",
+    "loginPageTitle": "Demo Login",
+    "loginSubmit": "LOGIN",
+    "enterEmail": "Enter Email",
+    "enterPassword": "Enter Password",
+    "aboutPageTitle": "About me",
+    "logout": "Logout",
+    "jobTitle": "Job Title",
+    "education": "Education",
+    "roleDescription": "Role Description",   
+    "firstName": "First Name",
+    "lastName": "Last Name",   
+    "fullName": "Full Name",
+    "title": "Title",
+    "family": "Family",
+    "formErrorOne": "Fill the form first.",
+    "formErrorTwo": "Email or password is wrong.",
+    "noInternet": "No internet access.",
+    "somethingWentWrong": "Something went wrong!"  
+   
+}   

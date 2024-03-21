@@ -1,0 +1,21 @@
+{
+    "onwerName": "Moaviz Shuqran Qureshi",
+    "appTitle": "Jeux de trône",
+    "loginPageTitle": "Connexion de démonstration",
+    "loginSubmit": "CONNEXION",
+    "enterEmail": "Entrez l'e-mail",
+    "enterPassword": "Entrez le mot de passe",
+    "aboutPageTitle": "À propos de moi",
+    "jobTitle": "Titre du poste",
+    "education": "Éducation",
+    "roleDescription": "Description du rôle",
+    "firstName": "Prénom",
+    "lastName": "Nom de famille",
+    "fullName": "Nom complet",
+    "title": "Titre",
+    "family": "Famille",
+    "formErrorOne": "Remplissez d'abord le formulaire.",
+    "formErrorTwo": "L'e-mail ou le mot de passe est incorrect.",
+    "noInternet": "Pas d'accès Internet.",
+    "somethingWentWrong": "Quelque chose s'est mal passé!"
+}

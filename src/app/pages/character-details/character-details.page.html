@@ -5,7 +5,7 @@
         <ion-icon name="arrow-back" color="dark"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Character details</ion-title>
+    <ion-title>{{characterName}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -27,23 +27,23 @@
       <ion-card-content>
         <table>
           <tr>
-            <th>First Name</th>
+            <th>{{'firstName' | translate }}</th>
             <td>{{eachCharacter.firstName}}</td>
           </tr>
           <tr>
-            <th>Last Name</th>
+            <th>{{'lastName' | translate }}</th>
             <td>{{eachCharacter.lastName}}</td>
           </tr>
           <tr>
-            <th>Full Name</th>
+            <th>{{'fullName' | translate }}</th>
             <td>{{eachCharacter.fullName}}</td>
           </tr>
           <tr>
-            <th>Title</th>
+            <th>{{'title' | translate }}</th>
             <td>{{eachCharacter.title}}</td>
           </tr>
           <tr>
-            <th>Family</th>
+            <th>{{'family' | translate }}</th>
             <td>{{eachCharacter.family}}</td>
           </tr>
         </table>

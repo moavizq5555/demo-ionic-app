@@ -15,15 +15,17 @@ const routes: Routes = [
      canActivate: [AntiauthGuard],
   },
   {
-    path: 'tabs',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule),
-     canActivate: [AuthGuard],
-  },
- 
-  {
     path: 'character-details',
     loadChildren: () => import('./pages/character-details/character-details.module').then( m => m.CharacterDetailsPageModule),
      canActivate: [AuthGuard],
+  },
+  {
+    path: 'characters-list',
+    loadChildren: () => import('./pages/characters-list/characters-list.module').then( m => m.CharactersListPageModule)
+  },
+  {
+    path: 'about-me',
+    loadChildren: () => import('./pages/about-me/about-me.module').then( m => m.AboutMePageModule)
   }
 ];
 @NgModule({

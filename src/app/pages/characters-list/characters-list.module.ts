@@ -4,19 +4,18 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CharacterDetailsPageRoutingModule } from './character-details-routing.module';
+import { CharactersListPageRoutingModule } from './characters-list-routing.module';
 
-import { CharacterDetailsPage } from './character-details.page';
-
+import { CharactersListPage } from './characters-list.page';
 import { TranslateModule } from '@ngx-translate/core';  
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CharacterDetailsPageRoutingModule,TranslateModule
+    CharactersListPageRoutingModule,
+    TranslateModule
   ],
-  declarations: [CharacterDetailsPage]
+  declarations: [CharactersListPage]
 })
-export class CharacterDetailsPageModule {}
+export class CharactersListPageModule {}

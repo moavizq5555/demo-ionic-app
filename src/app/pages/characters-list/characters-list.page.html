@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{'appTitle' | translate }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-down-outline" refreshingSpinner="circular"></ion-refresher-content>
+  </ion-refresher>
+  <ng-container *ngIf="!dataLoaded">
+    <ion-card  *ngFor="let ske of skeletonData">
+     <div class="skel-div">
+      <ion-skeleton-text animated ></ion-skeleton-text>
+      <div>
+        <ion-skeleton-text animated></ion-skeleton-text>
+        <ion-skeleton-text animated></ion-skeleton-text>
+        <ion-skeleton-text animated></ion-skeleton-text>
+        <ion-skeleton-text animated></ion-skeleton-text>
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </div>
+     
+     </div>
+    </ion-card>
+  </ng-container>
+  <ng-container *ngFor="let char of allCharacters">
+    <ion-item  (click) = "openCharacter(char)">
+      <ion-thumbnail slot="start">
+        <img alt="Silhouette of mountains" [src]="char.imageUrl" />
+      </ion-thumbnail>
+      <ion-label>{{char.fullName }}</ion-label>
+    </ion-item>
+  </ng-container>
+</ion-content>
