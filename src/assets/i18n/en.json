@@ -2,10 +2,15 @@
 {
     "onwerName": "Moaviz Shuqran Qureshi",
     "appTitle": "Games of throne",
-    "loginPageTitle": "Demo Login",
+    "loginPageTitle": "Login",
+    "registerPageTitle": "Registration",
     "loginSubmit": "LOGIN",
+    "signUpSubmit": "SIGN UP",
+    "enterFullName": "Enter Full Name",
     "enterEmail": "Enter Email",
+    "enterContact": "Enter Contact",
     "enterPassword": "Enter Password",
+    "enterConfirmPassword": "Enter Confirm Password",
     "aboutPageTitle": "About me",
     "logout": "Logout",
     "jobTitle": "Job Title",
@@ -19,6 +24,15 @@
     "formErrorOne": "Fill the form first.",
     "formErrorTwo": "Email or password is wrong.",
     "noInternet": "No internet access.",
+    "registeredSuccessfull": "User Registered successfully.",
+    "fullNameRequired": "Full name is required.",
+    "contactRequired": "Contact is required.",
+    "contactOnlyNumbers": "Contact should contain only numbers.",
+    "contactTenDigits": "Contact should be at least 10 digits long.",
+    "emailRequired": "Email is required.",
+    "passwordRequired": "Password is required.",
+    "validEmail": " Please provide a valid email.",
+    "cPasswordNotMatched": " Confirm Password not matched",
     "somethingWentWrong": "Something went wrong!"  
-   
+    
 }   

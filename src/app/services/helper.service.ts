@@ -13,7 +13,6 @@ export class HelperService {
   initalizei18n(){
     this.translate.setDefaultLang('en');
     const browserLang:any = this.translate.getBrowserLang();
-    console.log("browserLang --- ",browserLang);
     this.translate.use(browserLang);
   }
   navigateRoot(page: string, params?: any) {

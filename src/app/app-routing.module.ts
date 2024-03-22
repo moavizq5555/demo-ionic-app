@@ -29,7 +29,8 @@ const routes: Routes = [
   },
   {
     path: 'registration',
-    loadChildren: () => import('./pages/registration/registration.module').then( m => m.RegistrationPageModule)
+    loadChildren: () => import('./pages/registration/registration.module').then( m => m.RegistrationPageModule),
+    canActivate: [AntiauthGuard],
   }
 ];
 @NgModule({

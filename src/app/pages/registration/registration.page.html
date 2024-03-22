@@ -1,0 +1,115 @@
+<ion-content>
+  <div class="main text-center">
+    <div style="width: 100%; margin: 16px 16px">
+      <div>
+        <div class="logo"><img [src]="logoPath" /></div>
+        <h4 class="flex-center">
+          <ion-label color="primary h4"> {{'registerPageTitle' | translate }}</ion-label>
+        </h4>
+      </div>
+     <div class="mt-5">
+        <form [formGroup]="registrationForm">
+          <div class="input-center-div">
+            <ion-item class="ion-item" lines="none" class="ion-no-padding mb-2">
+              <ion-input
+                class="input-field ion-text-center"
+                placeholder="{{'enterFullName' | translate }}"
+                type="text"
+                formControlName="fullname"
+              ></ion-input>
+            </ion-item>
+            <div class="error"
+            *ngIf="registrationForm.get('fullname')?.touched && registrationForm.get('fullname')?.invalid">
+              <ion-text *ngIf="registrationForm.get('fullname')?.errors?.['required']" class="errorInput" color="danger">
+                {{'fullNameRequired' | translate }}
+              </ion-text>
+            </div> 
+            <ion-item class="ion-item" lines="none" class="ion-no-padding mb-2">
+              <ion-input
+                class="input-field ion-text-center"
+                placeholder="{{'enterContact' | translate }}"
+                type="tel"
+                formControlName="contact"
+              ></ion-input>
+            </ion-item>
+            <div class="error"
+                *ngIf="registrationForm.get('contact')?.touched && registrationForm.get('contact')?.invalid">
+              <ion-text *ngIf="registrationForm.get('contact')?.errors?.['required']" class="errorInput" color="danger">
+                {{'contactRequired' | translate }}
+              </ion-text>
+              <ion-text *ngIf="registrationForm.get('contact')?.errors?.['pattern']" class="errorInput" color="danger">
+                 {{'contactOnlyNumbers' | translate }}
+              </ion-text>
+              <ion-text *ngIf="registrationForm.get('contact')?.errors?.['minlength']" class="errorInput" color="danger">
+                 {{'contactTenDigits' | translate }}
+              </ion-text>
+            </div>
+            
+            <ion-item class="ion-item" lines="none" class="ion-no-padding mb-2">
+              <ion-input
+                class="input-field ion-text-center"
+                placeholder="{{'enterEmail' | translate }}"
+                type="email"
+                formControlName="email"
+              ></ion-input>
+            </ion-item>
+            <div class="error"
+                *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.invalid">
+              <ion-text *ngIf="registrationForm.get('email')?.errors?.['required']" class="errorInput" color="danger">
+                {{'emailRequired' | translate }}
+              </ion-text>
+              <ion-text *ngIf="registrationForm.get('email')?.errors?.['pattern']" class="errorInput" color="danger">
+               {{'validEmail' | translate }}
+              </ion-text>
+            </div>
+            <ion-item class="ion-item" lines="none" class="ion-no-padding mb-2">
+              <ion-input
+                class="input-field ion-text-center"
+                placeholder="{{'enterPassword' | translate }}"
+                type="password"
+                formControlName="password"
+              ></ion-input>
+            </ion-item>
+            <div class="error"
+                *ngIf="registrationForm.get('password')?.touched && registrationForm.get('password')?.invalid">
+              <ion-text *ngIf="registrationForm.get('password')?.errors?.['required']" class="errorInput" color="danger">
+                {{'passwordRequired' | translate }}
+              </ion-text>
+            </div>
+
+            <ion-item class="ion-item" lines="none" class="ion-no-padding mb-2">
+              <ion-input
+                class="input-field ion-text-center"
+                placeholder="{{'enterConfirmPassword' | translate }}"
+                type="password"
+                formControlName="confirmPassword"
+              ></ion-input>
+            </ion-item>
+            <div class="error"
+                *ngIf="registrationForm.get('confirmPassword')?.touched && registrationForm.get('confirmPassword')?.invalid">
+              <ion-text  class="errorInput" color="danger">
+                {{'cPasswordNotMatched' | translate }}
+              </ion-text>
+            </div>
+            <div class="flex-center">
+              <ion-button
+               class="button"
+               fill="outline"
+               size="small"
+               (click)="register()"
+               color="danger"
+               >  
+               {{'signUpSubmit' | translate }}
+               <ion-icon slot="end" name="log-in"></ion-icon>
+             </ion-button>
+            </div>
+            <hr>
+            <div class="mintoHint">
+              <small (click)="tologin()">----- Login -----</small>
+            </div>
+          </div>
+        </form>
+      </div> 
+    </div>
+  </div>
+</ion-content>
