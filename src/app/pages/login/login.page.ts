@@ -11,10 +11,6 @@ import { GlobalService } from 'src/app/services/global.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage  {
-  credentails = {
-    email : 'moavizq@gmail.com',
-    password : 'moaviz1234',
-  }
   logoPath: String;
   loginForm: FormGroup;
   constructor(private global:GlobalService, private fb: FormBuilder,private menu: MenuController,private translate:TranslateService,private authService: AuthenticationService,) {
