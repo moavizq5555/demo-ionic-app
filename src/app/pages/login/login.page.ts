@@ -27,7 +27,7 @@ export class LoginPage  {
       const loading = await this.global.component.showLoader();
       await loading.present();
             const user = await this.authService.loginUser(this.loginForm.value.email, this.loginForm.value.password).catch((err) => {
-              this.global.component.showToast(this.translate.instant('formErrorTwo'));
+              this.global.component.showToast(this.translate.instant('errorMessages.formErrorTwo'));
               loading.dismiss();
             }).then((user)=>{
               if (user) {
@@ -40,7 +40,7 @@ export class LoginPage  {
             })
     }
     else{
-      this.global.component.showToast(this.translate.instant('formErrorOne'));
+      this.global.component.showToast(this.translate.instant('errorMessages.formErrorOne'));
      
     }
       

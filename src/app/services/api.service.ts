@@ -26,9 +26,9 @@ export class ApiService {
               },
               async (err: HttpErrorResponse) => {
                 if (err.status === 0) {
-                  this.components.showToast(this.translate.instant('noInternet'));
+                  this.components.showToast(this.translate.instant('errorMessages.noInternet'));
                 } else {
-                  this.components.showToast(this.translate.instant('somethingWentWrong'));
+                  this.components.showToast(this.translate.instant('errorMessages.somethingWentWrong'));
                 }
                 reject(false);
               }

@@ -4,7 +4,7 @@
       <div>
         <div class="logo"><img [src]="logoPath" /></div>
         <h4 class="flex-center">
-          <ion-label color="primary h4"> {{'loginPageTitle' | translate }}</ion-label>
+          <ion-label color="primary h4"> {{'pageLabels.loginPageTitle' | translate }}</ion-label>
         </h4>
       </div>
      <div class="mt-5">
@@ -13,7 +13,7 @@
             <ion-item class="ion-item" lines="none" class="ion-no-padding mb-2">
               <ion-input
                 class="input-field ion-text-center"
-                placeholder="{{'enterEmail' | translate }}"
+                placeholder="{{'formLabels.enterEmail' | translate }}"
                 type="email"
                 formControlName="email"
               ></ion-input>
@@ -21,7 +21,7 @@
             <ion-item class="ion-item" lines="none" class="ion-no-padding mb-2">
               <ion-input
                 class="input-field ion-text-center"
-                placeholder="{{'enterPassword' | translate }}"
+                placeholder="{{'formLabels.enterPassword' | translate }}"
                 type="password"
                 formControlName="password"
               ></ion-input>
@@ -34,7 +34,7 @@
                (click)="login()"
                color="danger"
                >
-               {{'loginSubmit' | translate }}
+               {{'formLabels.loginSubmit' | translate }}
                <ion-icon slot="end" name="log-in"></ion-icon>
              </ion-button>
             

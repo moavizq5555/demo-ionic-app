@@ -63,14 +63,14 @@ export class RegistrationPage  {
       }).then((user)=>{
         if (user) {
           loading.dismiss();
-          this.global.component.showSuccessToast(this.translate.instant('registeredSuccessfull'));
+          this.global.component.showSuccessToast(this.translate.instant('successMessages.registeredSuccessfull'));
           this.global.helper.navigateRoot('/login')
         }
       })
 
      
     } else {
-      return this.global.component.showToast(this.translate.instant('formErrorOne'));
+      return this.global.component.showToast(this.translate.instant('errorMessages.formErrorOne'));
     }
       
   }
