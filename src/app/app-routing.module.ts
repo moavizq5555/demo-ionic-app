@@ -21,11 +21,13 @@ const routes: Routes = [
   },
   {
     path: 'characters-list',
-    loadChildren: () => import('./pages/characters-list/characters-list.module').then( m => m.CharactersListPageModule)
+    loadChildren: () => import('./pages/characters-list/characters-list.module').then( m => m.CharactersListPageModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'about-me',
-    loadChildren: () => import('./pages/about-me/about-me.module').then( m => m.AboutMePageModule)
+    loadChildren: () => import('./pages/about-me/about-me.module').then( m => m.AboutMePageModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'registration',
