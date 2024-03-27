@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AboutMePage implements OnInit {
 
-  constructor(private global :GlobalService,private translate: TranslateService) { }
+  constructor(private global :GlobalService) { }
 
   ngOnInit() {
   }
